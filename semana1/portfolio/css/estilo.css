@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+
+/*** LAYOUT ***/
+
+/* HEADER ****/
+
+#cabecalho {
+    display: block;
+    background-color: #7626EB;
+    width: 1428px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logo{
+    padding: 15px;
+    text-align: center;
+    
+}
+
+#logo h1 {
+    color:#ffffff;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+nav{
+    text-align: center;
+    padding: 16px;
+    
+}
+
+nav a{
+    text-decoration: none;
+    padding-left: 28px;
+    text-align: center;
+    font-size: 32px;
+}
+
+a:link, a:visited{
+    color: orange;
+}
+
+a:hover{
+    color: #ffffff;
+}
+
+/* CONTEÚDO ****/
+
+#container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 920px;
+     
+}
+
+.titulo-principal{
+    width: 920px;
+    background-color: #ffffff;
+    height: auto;
+}
+
+.titulo-principal h1{
+    font-size: 30px;
+    color: #7626EB;
+    text-align: center;
+    padding: 16px;
+}
+.imagem-perfil{
+    width: 400px;
+    float: left;
+    
+}
+
+.imagem-perfil img{
+    width: 400px;
+    height: 400px;
+    margin-top: 20px;
+}
+.sobre-mim{
+    width: 500px;
+    float: right;
+}
+
+.sobre-mim h3 {
+    margin-top: 20px;
+    text-align: center;
+    color: orange;
+}
+
+.sobre-mim p{
+    line-height: 24px;
+    margin-top: 16px;
+}
+
+.habilidades {
+    clear: both;
+    width: 920px;
+}
+
+.habilidades h3{
+    padding-top: 40px;
+    text-align: center;
+    color: black;
+}
+
+.habilidades img {
+    width: 50px;
+    height: 50px;
+    
+}
+
+.box1, .box2, .box3 {
+    width: 300px;
+    padding: 30px;
+    margin-top: 30px;
+}   
+
+.box1 {
+    text-align: center;
+    float: left;
+}
+
+.box2 {
+    text-align: center;
+    float: right;
+}
+
+.box3 {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    clear: both;
+}
+
+#empregos-cursos {
+    width: 920px;
+    text-align: center;
+}
