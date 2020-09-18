@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    width: 1366;
+    height: 600px;
+    
+}
+
+#cabecalho {
+    background-color: #194C85;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.bemvindo h1{
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    line-height: 10px;
+}
+
+.bemvindo p {
+    color: #ffffff;
+    text-align: center;
+    line-height: 20px; 
+}
+
+#navegacao{
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: #194C85;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0 16px 0 16px;
+}
+
+a:hover {
+    color: #CC4D16;
+}
+
+a:active {
+    color: #CC4D16;
+}
+
+/* FIM DO CABEÇALHO */
+
+
+
+.conteudo {
+    margin: 0 auto;
+    background-color: #ffffff;
+    width: 50%;
+}
+
+.box {
+    background-color: #ffffff ;
+}
+
+.box h2 {
+    text-align: center;
+    color: #CC4D16 ;
+    padding-bottom: 40px;
+}
+
+.box p {
+    text-align: center;
+    line-height: 32px;
+}
+/*Fim do conteúdo */
+
+#rodape {
+    
+    margin: 0 auto;
+    width: 50%;
+    height: 90;
+    margin-top: 800px;
+       
+}
+
+#rodape p {
+    text-align: center;
+    color: #CC4D16 ;
+}
+
+.redes {
+    text-align: center;
+    
+}
+
+.redes img {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 10px 0 10px 0;
+    
+}
+
+/* COMEÇANDO A PÁGINA FUNCIONÁRIOS */
