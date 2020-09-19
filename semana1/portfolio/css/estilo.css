@@ -17,8 +17,8 @@ body{
 #cabecalho {
     display: block;
     background-color: #7626EB;
-    width: 1428px;
-    height: 150px;
+    
+    height: 140px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -44,15 +44,16 @@ nav a{
     text-decoration: none;
     padding-left: 28px;
     text-align: center;
-    font-size: 32px;
+    font-size: 20px;
 }
 
-a:link, a:visited{
-    color: orange;
-}
-
-a:hover{
+a:link{
     color: #ffffff;
+}
+
+
+a:hover, a:visited{
+    color: orange;
 }
 
 /* CONTEÚDO ****/
@@ -62,6 +63,7 @@ a:hover{
     margin-left: auto;
     margin-right: auto;
     width: 920px;
+    
      
 }
 
@@ -102,6 +104,7 @@ a:hover{
 .sobre-mim p{
     line-height: 24px;
     margin-top: 16px;
+    text-align: center;
 }
 
 .habilidades {
@@ -147,4 +150,119 @@ a:hover{
 #empregos-cursos {
     width: 920px;
     text-align: center;
+}
+
+
+/* RODAPÉ */
+
+#rodape {
+    background-color: #7626EB;
+    height: 200px;
+    
+}
+
+.redes-sociais {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.redes-sociais p{
+    color: #ffffff;
+    
+}
+
+.redes-icones {
+    text-align: center;
+}
+
+.redes-icones img {
+    width: 24px;
+    height: 24px;
+    padding-top: 16px;
+}
+
+.direito-reservado {
+    text-align: center;
+    padding-top: 16px;
+    color: #ffffff;
+}
+
+/* PROJETOS */
+
+.conteudo-projetos {
+    text-align: center;
+    padding-top: 20px;
+    height: 600px;
+}
+
+.processo-seletivo{
+    margin-top: 50px;
+    font-size: 24px;
+}
+.processo-seletivo a{
+    text-decoration: none;
+    display: block;
+    margin-top: 16px;
+    
+}
+
+/* EXPERIÊNCIA PROFISSIONAL */
+
+.empregos-cursos {
+    text-align: center;
+    height: 600px;
+    margin-top: 20px;
+
+}
+
+table {
+    background-color: #fafafa;
+    margin: 20px auto;
+    font-size: 24px;
+    padding: 20px;
+    text-align: justify;
+}
+
+th{
+    color: #7626EB;
+}
+
+td{
+    padding-right: 20px;
+}
+
+/* CONTATO
+******/
+.container-contato {
+    display: flex;
+    justify-content: center;
+}
+.contato{
+    text-align: center;
+    height: 600px;
+    margin: 20px;
+    
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+}
+
+.field{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid ##C9C5C5;
+    border-radius: 5px;
+    width: 300px;
+    
+}
+
+button {
+    border-radius: 5px;
+    background-color: #7626EB;
+    color: #ffffff;
+    height: 30px;
 }
