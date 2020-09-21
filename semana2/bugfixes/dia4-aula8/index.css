@@ -19,6 +19,11 @@ h2 {
 input {
     height: 20px;
     width: 500px;
+    border-top: 0 ;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid black;
+    
 }
 
 button:focus {
