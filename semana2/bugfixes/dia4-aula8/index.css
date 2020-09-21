@@ -106,7 +106,7 @@ div img {
 
 div:nth-child(2),
 div:last-child {
-    text-align: center;
+    text-align:center;
 }
 
 table {
@@ -119,6 +119,10 @@ td button {
     height: 30px;
     border-radius: 5px;
     color: black;
+}
+
+.texto-tabela{
+    text-align: center;
 }
 
 .container-do-search {
