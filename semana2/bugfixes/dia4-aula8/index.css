@@ -125,6 +125,12 @@ td button {
     text-align: center;
 }
 
+.imagens{
+    width: 20px;
+    height: 20px;
+    
+}
+
 .container-do-search {
     margin-top: 20px;
     height: 100px;
