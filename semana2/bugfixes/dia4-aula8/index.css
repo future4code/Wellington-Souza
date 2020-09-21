@@ -118,6 +118,13 @@ td button {
     color: black;
 }
 
+td button:hover{
+    background-color: #e9c00a;
+}
+
+td: button:active {
+    color: #ffffff;
+}
 .texto-tabela{
     text-align: center;
 }
