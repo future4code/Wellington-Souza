@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px ;
+    font-family: 'Roboto', sans-serif;
+    max-width: 100vw;
+    
+   
+}
+
+header {
+    width: 100vw;
+    background-color: red;
+    display: flex;    
+    justify-content: space-around;
+    height: 10vh;
+    align-items: center;
+    color: #ffffff;
+    
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+input{
+    background-color: #f3f3f3;
+    border: none;
+    width: 20em;
+    height: 2em;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+section {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 0.5em;
+    row-gap: 0.5em;
+    margin-top: 6em;
+    
+    
+    
+    
+}
+
+article {
+  
+  height: 25vh;
+  width: 25vh;
+   
+
+}
+
+
+article video{
+    width: 25vh;
+    
+}
+
+
+h4 {
+    text-transform: none;
+    text-align: center;
+    color: red;
+    margin-top: 5px;
+}
+
+
+#video-player{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.video{
+    margin-top: 2em;
+    width: 50em;
+}
+
+h2{
+    font-size: 24px;
+    color: red;
+    justify-self: center;
+    align-self: center;
+}
+#video-player p{
+    line-height: 22px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+footer {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+footer h3{
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 850px) {
+    
+
+    input{
+        width: 10em;
+        height: 2em;
+    }
+
+    section{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 20vh);
+    }
+    
+
+    article video{
+        width: 25vh;
+        
+    }
+
+    #video-player p{
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    
+
+    .video{
+        width: 40vh;
+        margin-left: 6vw;
+        
+    }
+
+    footer{
+        position: fixed;
+        bottom: 0;
+        
+    }
+
+
+
+}
