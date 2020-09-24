@@ -159,7 +159,8 @@ footer h3{
     }
 
     footer{
-        position: fixed;
+        display: flex;
+        flex-direction: column;
         bottom: 0;
         
     }
