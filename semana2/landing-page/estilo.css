@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    max-width: 1280px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+}
+/* INICIO DO CABEÇALHO */
+header{
+    
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    
+    
+    
+}
+
+
+
+.menu-principal a{
+    padding-left: 20px;
+    align-self: center;
+    
+    
+}
+
+
+nav button{
+    margin-left: 16px;
+    width: 190px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #FF5C5C;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: black;
+     
+}
+
+a:hover{
+    color: #FF5C5C;
+}
+
+button:hover{
+    background-color: #c10909;
+}
+
+nav img{
+    width: 16px;
+    padding-left: 16px;
+    cursor: pointer;
+}
+
+button{
+    width: 190px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #FF5C5C;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 8px;
+}
+/* FIM DO CABEÇALHO */
+
+/* INICIO DO CONTEÚDO PRINCIPAL 1° SEÇÃO*/
+
+#topo{  
+    height: 90vh;    
+    display: flex;
+    background-repeat: repeat-x;
+    background-image: url(./img/background.png);
+    background-position: bottom;
+    align-items: center;
+    position: relative;
+    justify-items: flex-end;
+    
+    
+}
+.texto{
+    display: block;
+    margin-left: 4rem;
+    position: absolute;
+    align-self: ;
+
+    
+}
+.texto h2{
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    
+    color: #FF5C5C;
+    
+}
+
+.texto p {
+    font-size: 24px;
+    line-height: 32px;
+    
+}
+
+#topo img {
+    width: 900px;
+    margin-top: 40px;
+    margin-left: 20rem;
+    
+}
+
+/* FIM DA PRIMEIRA SEÇÃO - CONTEÚDO PRINCIPAL */
+
+/* INICIO DA SEGUNDA SEÇÃO */
+
+#segunda-secao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+    
+    
+    
+}
+
+#segunda-secao article{
+    margin-bottom: 40px;
+}
+
+#segunda-secao h3{
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+#segunda-secao a{
+    text-decoration: none;
+    color: #FF5C5C;
+
+}
+
+/* FIM DA SEGUNDA SEÇÃO */
+
+/* INICIO DA TERCEIRA SEÇÃO */
+
+
+#secao-3 {
+    text-align: justify;
+    margin-top: 40px;
+    margin-left: 4rem;
+    
+}
+
+#secao-3 h2{
+    margin-bottom: 24px;
+    color: #FF5C5C;
+}
+
+#secao-3 p{
+    line-height: 24px;
+    text-align: justify;
+    margin-bottom: 16px;
+    
+}
+
+/* FIM DA TERCEIRA SEÇÃO */
+
+/* INICIO DA SEÇÃO VEICULOS E BENEFICIOS */
+
+#veiculos{
+    margin-top: 80px;
+    
+}
+
+h2{
+    margin-bottom: 24px;
+    color: #FF5C5C;
+}
+
+
+/* FIM DA SEÇÃO VEICULOS E BENEFICIOS */
+
+/* INICIO DO FOOTER */
+
+footer{
+    background-color: #FF5C5C;
+    display: flex;
+    height: 20vh;
+}
+
+/* FIM DO FOOTER*/
