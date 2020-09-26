@@ -134,9 +134,7 @@ nav img{
     margin-top: 80px;
     background-image: url(./img/background.png);
     background-position: top;
-    background-repeat: repeat-x;
-    
-    
+    background-repeat: repeat-x;  
     
 }
 
@@ -197,6 +195,10 @@ nav img{
     
 }
 
+.carros{
+    width: 20vw;
+}
+
 #veiculos button{ 
     grid-column: 2 / 3;   
 }
@@ -238,57 +240,6 @@ h2{
 
 
 /* FIM DA SEÇÃO VEICULOS */
-
-/* INCICIO SEÇÃO BENEFÍCIOS */
-
-#beneficios{
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px;
-    background-image: url(./img/beneficios.png);
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: 25vw;
-    justify-content: center;
-    
-    
-    
-}
-#beneficios article{
-    margin-left: 25em;
-}
-
-#beneficios ul{
-    list-style: none;
-    line-height: 1.5em;
-}
-
-
-#beneficios p {
-    color: black;
-    margin-bottom: 30px;
-    text-align: justify;
-}
-
-#beneficios button{
-    color: #FF5C5C;
-    border: 1px solid #FF5C5C;
-    width: 190px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: #ffffff;
-    cursor: pointer; 
-    margin-top: 1em;
-}
-
-#beneficios button:hover{
-    border: 1px solid #c10909;
-    color: #c10909; 
-}
-
-/* FIM DA SEÇÃO BENEFÍCIOS */
 
 /* INICIO DO FOOTER */
 
@@ -435,30 +386,7 @@ footer img{
         width: 40vw;
     }
 
-    /* BENEFICIOS */
-
-        #beneficios{
-            background-image: none;
-            justify-items: flex-start;
-            align-items: flex-end;
-            margin-right: 5em;
-
-        }
-
-        #beneficios h2{
-            font-size: 1.2rem;
-            text-align: center;
-        }
-
-        #beneficios p{
-            font-size: 0.9rem;
-        }
-
-        #beneficios ul{
-            font-size: 0.9rem;
-        }
-
-    /* FIM DO BENEFICIOS */
+ 
         
         footer{
             align-content: flex-end;
@@ -482,5 +410,3 @@ footer img{
         }
     /*FOOTER */
    }
-
-
