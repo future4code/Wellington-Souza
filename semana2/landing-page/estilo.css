@@ -9,6 +9,8 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0 auto;
 }
+
+
 /* INICIO DO CABEÇALHO */
 header{
     
@@ -17,9 +19,7 @@ header{
     justify-content: space-around;
     align-items: center;
     justify-items: center;
-    
-    
-    
+
 }
 
 
@@ -57,17 +57,18 @@ a:hover{
     color: #FF5C5C;
 }
 
-button:hover{
+.botao-primario:hover{
     background-color: #c10909;
 }
 
 nav img{
     width: 16px;
     padding-left: 16px;
+    color: #FF5C5C;
     cursor: pointer;
 }
 
-button{
+.botao-primario{
     width: 190px;
     height: 40px;
     color: #ffffff;
@@ -86,20 +87,23 @@ button{
 #topo{  
     height: 90vh;    
     display: flex;
-    background-repeat: repeat-x;
-    background-image: url(./img/background.png);
-    background-position: bottom;
-    align-items: center;
-    position: relative;
-    justify-items: flex-end;
+    flex-direction: column;
+
+    background-repeat: no-repeat;
+    background-image: url(./img/driver.svg);
+    background-position: left;
+    background-size: 40vw;
+    align-items: flex-end;
+    justify-content: center;
     
     
 }
 .texto{
+    
     display: block;
     margin-left: 4rem;
-    position: absolute;
-    align-self: ;
+    
+    
 
     
 }
@@ -107,7 +111,6 @@ button{
     font-size: 2rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    
     color: #FF5C5C;
     
 }
@@ -115,13 +118,8 @@ button{
 .texto p {
     font-size: 24px;
     line-height: 32px;
-    
-}
-
-#topo img {
-    width: 900px;
-    margin-top: 40px;
-    margin-left: 20rem;
+    color: black;
+    text-align: justify;
     
 }
 
@@ -130,11 +128,13 @@ button{
 /* INICIO DA SEGUNDA SEÇÃO */
 
 #segunda-secao{
-    display: flex;
-    flex-direction: column;
+    height: 30vh;
     align-items: center;
     text-align: center;
     margin-top: 80px;
+    background-image: url(./img/background.png);
+    background-position: top;
+    background-repeat: repeat-x;
     
     
     
@@ -176,32 +176,311 @@ button{
     line-height: 24px;
     text-align: justify;
     margin-bottom: 16px;
-    
+    color: black;
 }
 
 /* FIM DA TERCEIRA SEÇÃO */
 
-/* INICIO DA SEÇÃO VEICULOS E BENEFICIOS */
+/* INICIO DA SEÇÃO VEICULOS */
 
 #veiculos{
     margin-top: 80px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    background-image: url(./img/backgroun1.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    
     
 }
+
+#veiculos button{ 
+    grid-column: 2 / 3;   
+}
+
+.botao-secundario{
+    color: #FF5C5C;
+    border: 1px solid #FF5C5C;
+    width: 190px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    
+}
+
+.botao-secundario:hover{
+    border: 1px solid #c10909;
+    color: #c10909;
+}
+
+.frota{
+    grid-column: 1 / 4;
+    text-align: center;
+    
+}
+
+.carros{
+    display: flex;
+    justify-content: space-around;
+    grid-column: 1 / 4;
+}
+
 
 h2{
     margin-bottom: 24px;
     color: #FF5C5C;
+    
 }
 
 
-/* FIM DA SEÇÃO VEICULOS E BENEFICIOS */
+/* FIM DA SEÇÃO VEICULOS */
+
+/* INCICIO SEÇÃO BENEFÍCIOS */
+
+#beneficios{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    background-image: url(./img/beneficios.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 25vw;
+    justify-content: center;
+    
+    
+    
+}
+#beneficios article{
+    margin-left: 25em;
+}
+
+#beneficios ul{
+    list-style: none;
+    line-height: 1.5em;
+}
+
+
+#beneficios p {
+    color: black;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+#beneficios button{
+    color: #FF5C5C;
+    border: 1px solid #FF5C5C;
+    width: 190px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer; 
+    margin-top: 1em;
+}
+
+#beneficios button:hover{
+    border: 1px solid #c10909;
+    color: #c10909; 
+}
+
+/* FIM DA SEÇÃO BENEFÍCIOS */
 
 /* INICIO DO FOOTER */
 
 footer{
     background-color: #FF5C5C;
-    display: flex;
+    display: grid;
     height: 20vh;
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    
 }
 
+p{
+    color: #ffffff;
+    text-align: center;
+}
+
+h5{
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.copy{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    align-items: center;
+}
+
+.redes-sociais{
+    grid-column: 3 / 4;
+    justify-self: center;
+
+}
+
+footer img{
+    width: 30px;
+}    
 /* FIM DO FOOTER*/
+
+/* INICIO DA RESPONSIVIDADE */
+
+   @media screen and (max-width:375px){
+    
+    body{
+        width: 100vw;
+    }
+
+ /* CABEÇALHO */
+
+    .responsive{
+           height: 30vh;
+           display: flex;
+           flex-direction: column;
+           align-items: space-around;
+           justify-items: center;
+           text-align: center;
+           
+           
+
+       }
+
+       .logomarca{
+           margin-left: 2em;
+       }
+       .menu-principal{
+           font-size: 0.6em;
+           padding-left: 0.5em;
+           display: flex;
+           justify-content: center;
+           text-align: center;
+
+       }
+
+       .menu-secundario{
+           font-size: 0.8em;
+       }
+
+    /* CONTEUDO PRINCIPAL */
+
+    #topo{  
+        background-image: none;
+        margin-right: 3rem;   
+    }
+
+         
+     .botao-primario{
+         width: 10rem;
+         font-size: 1em;
+     }   
+    
+        
+    }
+    .texto h2{
+        font-size: 1.2em;
+        
+        
+    }
+    
+    .texto p {
+        font-size: 0.9em;
+        line-height: 1.6em;
+               
+    }
+
+    /* SEGUNDA SEÇÃO */
+    #segunda-secao h3{
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+
+
+    /* CONTEÚDO SECUNDARIO */
+    #secao-3{
+        margin-right: 5rem;
+    }
+
+    #secao-3 h2{
+        margin-bottom: 16Px;
+        color: #FF5C5C;
+        font-size: 1rem;
+    }
+    
+    #secao-3 p{
+        font-size: 0.8rem;
+        line-height: 24px;
+        text-align: justify;
+        margin-bottom: 16px;
+        color: black;
+    }
+
+    /* VEICULOS - FROTA */
+
+    #veiculos h2{
+        font-size: 1rem;
+    }
+
+    #veiculos img{
+        width: 40vw;
+    }
+
+    /* BENEFICIOS */
+
+        #beneficios{
+            background-image: none;
+            justify-items: flex-start;
+            align-items: flex-end;
+            margin-right: 5em;
+
+        }
+
+        #beneficios h2{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        #beneficios p{
+            font-size: 0.9rem;
+        }
+
+        #beneficios ul{
+            font-size: 0.9rem;
+        }
+
+    /* FIM DO BENEFICIOS */
+        
+        footer{
+            align-content: flex-end;
+        }
+
+        .endereco{
+            font-size: 0.8rem;
+        }
+        .copy{
+            font-size: 0.8rem;
+        }
+
+         .redes-sociais{
+            grid-column: 3 / 4;
+            justify-self: flex-end;
+            margin-left: 2px;
+         }   
+        .redes-sociais img{
+            width: 16px;
+            
+        }
+    /*FOOTER */
+   }
+
+
