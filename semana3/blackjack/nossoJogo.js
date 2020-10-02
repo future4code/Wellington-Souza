@@ -14,30 +14,29 @@ let usuario = comprarCarta();
 let computador = comprarCarta(); 
 let usuario2 = comprarCarta();
 let computador2 = comprarCarta();
-
-
 let mensagem = confirm("Quer iniciar uma nova rodada?")
 
 console.log("Bem vindo ao jogo BlackJack!")
 
 if(mensagem){
-   console.log("Usuário - cartas: "+ usuario.texto + " " + usuario2.valor + " - pontuação " + resultado)
-   console.log("computador - cartas: "+ computador.texto + " " + computador2.valor + " - pontuação " + resultado2)
-
-   }else{
-   console.log("O jogo acabou!")
+   resultado = usuario.valor + usuario2.valor 
+   resultado2 = computador.valor + computador2.valor
+   console.log("Usuário - cartas: "+ usuario.texto + " " + usuario2.texto + " - pontuação " + resultado)
+   console.log("computador - cartas: "+ computador.texto + " " + computador2.texto + " - pontuação " + resultado2)
+      if(resultado > resultado2){
+         console.log("Usuário venceu!")
+      }else if (resultado < resultado2){
+         console.log("Computador venceu!")
+      }else{
+         console.log("Empate!")
+      }
+}else {
+   console.log("Acabou o jogo!")
 }
 
-let resultado = usuario.valor + usuario2.valor 
-let resultado2 = computador.valor + computador2.valor
 
-if (resultado > resultado2) {
-   console.log("Usuário ganhou!")
-}else if(resultado < resultado2){
-   console.log("computador ganhou!")
-}else{
-   console.log("Empate!")
-}
+
+
 
 
 
