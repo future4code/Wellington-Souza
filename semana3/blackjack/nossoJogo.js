@@ -10,7 +10,7 @@
  * 
  * 
  */
-let usuario = comprarCarta();
+/*let usuario = comprarCarta();
 let computador = comprarCarta(); 
 let usuario2 = comprarCarta();
 let computador2 = comprarCarta();
@@ -33,7 +33,7 @@ if(mensagem){
 }else {
    console.log("Acabou o jogo!")
 }
-
+*/
 
 
 
