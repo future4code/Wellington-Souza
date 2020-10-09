@@ -24,24 +24,69 @@ de elementos da array numeros, array1 e array2. Os valores serão: 14, 6, 8.
 // EXERCICIO 4 DE INTERPRETAÇÃO DE CÓDIGO
 
 /* Existe uma estrutura de repetição para verificar qual numero de dentro do array numeros será maior ou menor que
-do array1 e array2. O Resultado será impresso no console Infinity e */
+do array1 e array2. O Resultado será impresso no console Infinity -10 e 1590. */
 
 
-const numeros = [25, 12, 55, 64, 121, 44, 11, 84, 51, 48, 14, 73, 111, 283, 1, 99, 13, 31, 83, 131, 1, 1.1, -10,
-25, 1590];
+// ----------------------------------------- EXERCÍCIOS DE LÓGICA DE PROGRAMAÇÃO -------------------------------------
 
-let numero1 = Infinity;
-let numero2 = 0;
+// EXERCICIO 1 :
 
-for (let numero of numeros){
-    if(numero < numero1){
-        numero1 = numero;
+// Podemos utilizar para interar e pecorrer um array o for...of, index do array e utilizando callback em array.
+
+/* const usuario [{
+    nome: "André", idade: 25, profissao: "Advogado",
+    nome: "Jessica", idade: 23, profissao: "Enfermeira",
+    nome: "Antonia", idade: 35, profissao: "Professora",
+}]
+
+let novoUsuario = usuario.map ((usuarios, idx, usuario) =>{
+    return usuarios.nome
+}) */
+
+// EXERCICIO 2 :
+
+// a. false
+// b. false
+// c. true
+// d. false
+// e. false
+
+// EXERCICIO 3 :
+
+/*const quanntidadeDeNumerosPares = 5
+
+let i = 0
+
+while (i < quanntidadeDeNumerosPares){
+    console.log(i*2)
+
+    i++
+}*/
+
+// EXERCICIO 4 :
+
+/*let nomearTriangulo = (a, b, c) => {
+    
+    if (a ===b && b === c){
+        console.log("Este triângulo é equilátero")
+    }else if (a === b && b !== c){
+        console.log("Este triângulo é isósceles")
+    }else{
+        console.log("Este triângulo é escaleno")
     }
 
-    if (numero > numero2){
-        numero2 = numero;
-    }
-}
 
-console.log(numero1)
-console.log(numero2)
+}  
+
+ nomearTriangulo(4, 4, 2) */
+
+ // EXERCICIO 5 : 
+
+ let determinaValor = (a, b) => {
+
+   if (a > b || b > a){
+       console.log
+   }
+
+
+ }
