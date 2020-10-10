@@ -150,7 +150,7 @@ while (i < quanntidadeDeNumerosPares){
 
  // EXERCICIO 3 :
 
- const filmeFavorito = {
+ /*const filmeFavorito = {
      filme: "Toy Story",
      ano: 1995,
      diretor: "John Lasseter",
@@ -159,7 +159,26 @@ while (i < quanntidadeDeNumerosPares){
     }
 
     console.log(`Venha assistir ao filme ${filmeFavorito.filme}, de ${filmeFavorito.ano}, dirigido por ${filmeFavorito.diretor}
-    e estrelado por ${filmeFavorito.elenco}`)
+    e estrelado por ${filmeFavorito.elenco}`) */
 
+// EXERCICIO 4
 
+const pessoa = {
+    nome: "Pietra",
+    idade: 22,
+    email: "pietra.@gmail.com",
+    endereco: "Rua Alberto Vasco, 44"
+
+}
+
+const anonimizarPessoa = () =>{
+    
+    const pessoa2 ={
+        ...pessoa,
+        nome: "Anônimo"
+    }
+    console.log(pessoa2)
+}
+
+anonimizarPessoa()
 
