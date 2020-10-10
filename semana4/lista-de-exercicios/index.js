@@ -125,3 +125,27 @@ while (i < quanntidadeDeNumerosPares){
  }
 
  const alertando = alertaUsuario(); */
+
+ // ---------------------------------------------EXERCICIO DE OBJETO ------------------------------------------
+
+ // EXERCICIO 1 :
+
+ /* Arrays é uma maneira de guardar vários dados em um mesmo lugar é como se fosse uma lista de dados, esses dados
+ podem ser strings, numeros ou booleanos. Devemos utilizar os arrays quando quisermos armazenar dados simples em 
+ uma mesma variável. Objeto é uma forma de estrutura que nos ajuda a guardar dados mais complexos é como se fosse
+ uma gaveta que separa os seus elementos através de organizadores. Utilizamos o objeto para quando quisermos guardar
+ dados de um usuário como o nome, idade, e-mail, telefone etc. Podemos usar um objeto dentro de uma array.*/
+
+ // EXERCICIO 2 :
+
+ /*let criaRetangulo = (lado1, lado2) =>{
+     const retangulo = {
+         largura: lado1,
+         altura: lado2,
+         perimetro: 2* (lado1 + lado2),
+         area: lado1 * lado2
+     }
+ }*/
+
+ 
+
