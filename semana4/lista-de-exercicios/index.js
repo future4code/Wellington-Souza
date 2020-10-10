@@ -74,19 +74,31 @@ while (i < quanntidadeDeNumerosPares){
     }else{
         console.log("Este triângulo é escaleno")
     }
-
-
 }  
-
  nomearTriangulo(4, 4, 2) */
 
+ 
  // EXERCICIO 5 : 
 
- let determinaValor = (a, b) => {
+ let verificaNumeros = (numero1, numero2) =>{
 
-   if (a > b || b > a){
-       console.log
-   }
+    let divisor = numero1 % numero2 === 0
+    let divisor2 = numero2 % numero1 === 0
+    let diferenca = numero1 - numero2
+    let resultado = Math.abs (diferenca)
 
-
+    if (numero1 > numero2){
+        console.log(`O número maior é: ${numero1}`)
+        
+    } else{
+        console.log(`O número maior é: ${numero2}`)
+    }
+    
+    console.log(`${numero1} não é divisível por ${numero2}`)
+    console.log(`${numero2} é divisível por ${numero1}`)
+    console.log(`A diferença entre eles é ${resultado}`)
+  
+    
  }
+
+ verificaNumeros (15, 30)
