@@ -189,7 +189,7 @@ anonimizarPessoa()
 
 // a. 
 
-const arrayPessoas = [
+/*const arrayPessoas = [
     {nome: "Pedro", idade: 20},
     {nome: "João", idade: 10},
     {nome: "Paula", idade: 12},
@@ -200,5 +200,37 @@ const novoArrayDeNomes = arrayPessoas.filter ((pessoas, idades, arrayPessoas) =>
     if (pessoas.idade >= 20){
         return pessoas.nome
     }
+}) */
+
+// b. 
+
+/*const arrayPessoas = [
+    {nome: "Pedro", idade: 20},
+    {nome: "João", idade: 10},
+    {nome: "Paula", idade: 12},
+    {nome: "Arthur", idade: 89}    
+]
+
+const novoArrayDeNomes = arrayPessoas.filter ((pessoas, idades, arrayPessoas) =>{
+    if (pessoas.idade > 20){
+        return pessoas.nome
+    }
+})*/
+
+// EXERCICIO 2
+
+// a. 
+
+const arrayDeNumeros = [1, 2, 3, 4, 5, 6]
+
+const arrayMultiplosDois = arrayDeNumeros.map ((numero, idx, arrayDeNumeros) =>{
+    
+    for (let i = 0; i < arrayDeNumeros.length; i++){
+        return numero * 2
+    }
+
 })
+const novoArray = arrayMultiplosDois
+console.log(arrayMultiplosDois)
+
 
