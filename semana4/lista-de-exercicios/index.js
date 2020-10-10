@@ -80,7 +80,7 @@ while (i < quanntidadeDeNumerosPares){
  
  // EXERCICIO 5 : 
 
- let verificaNumeros = (numero1, numero2) =>{
+ /*let verificaNumeros = (numero1, numero2) =>{
 
     let divisor = numero1 % numero2 === 0
     let divisor2 = numero2 % numero1 === 0
@@ -101,4 +101,27 @@ while (i < quanntidadeDeNumerosPares){
     
  }
 
- verificaNumeros (15, 30)
+ verificaNumeros (15, 30) */
+
+ //---------------------------------------- EXERCICIO FUNÇÕES -------------------------------------------
+
+ // EXERCICIO 1 :
+
+/* let arrNumeros = [20, 55, 16, 13, 11, 50, 32, 45, 89]
+
+ let verificaNumerosMaiorEmenor = () =>{
+
+    for (let numero = 0; numero < arrNumeros.length; numero++){
+        
+    }
+ }
+
+ verificaNumerosMaiorEmenor() */
+
+ // EXERCICIO 2 :
+/*
+ const alertaUsuario = () =>{
+     alert("Hello Future4")
+ }
+
+ const alertando = alertaUsuario(); */
