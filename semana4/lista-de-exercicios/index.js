@@ -147,5 +147,19 @@ while (i < quanntidadeDeNumerosPares){
      }
  }*/
 
+
+ // EXERCICIO 3 :
+
+ const filmeFavorito = {
+     filme: "Toy Story",
+     ano: 1995,
+     diretor: "John Lasseter",
+     elenco: ["Tom Hanks", "Tim Allen","Annie Potts"]
  
+    }
+
+    console.log(`Venha assistir ao filme ${filmeFavorito.filme}, de ${filmeFavorito.ano}, dirigido por ${filmeFavorito.diretor}
+    e estrelado por ${filmeFavorito.elenco}`)
+
+
 
