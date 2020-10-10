@@ -162,7 +162,7 @@ while (i < quanntidadeDeNumerosPares){
     e estrelado por ${filmeFavorito.elenco}`) */
 
 // EXERCICIO 4
-
+/*
 const pessoa = {
     nome: "Pietra",
     idade: 22,
@@ -181,4 +181,24 @@ const anonimizarPessoa = () =>{
 }
 
 anonimizarPessoa()
+*/
+
+// ----------------------------------------------------- FUNÇÕES DE ARRAY --------------------------------------------
+
+// EXERCICIO 1
+
+// a. 
+
+const arrayPessoas = [
+    {nome: "Pedro", idade: 20},
+    {nome: "João", idade: 10},
+    {nome: "Paula", idade: 12},
+    {nome: "Arthur", idade: 89}    
+]
+
+const novoArrayDeNomes = arrayPessoas.filter ((pessoas, idades, arrayPessoas) =>{
+    if (pessoas.idade >= 20){
+        return pessoas.nome
+    }
+})
 
