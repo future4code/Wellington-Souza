@@ -220,17 +220,41 @@ const novoArrayDeNomes = arrayPessoas.filter ((pessoas, idades, arrayPessoas) =>
 // EXERCICIO 2
 
 // a. 
-
+/*
 const arrayDeNumeros = [1, 2, 3, 4, 5, 6]
 
 const arrayMultiplosDois = arrayDeNumeros.map ((numero, idx, arrayDeNumeros) =>{
+   
+    return numero * 2
     
-    for (let i = 0; i < arrayDeNumeros.length; i++){
-        return numero * 2
-    }
 
 })
-const novoArray = arrayMultiplosDois
-console.log(arrayMultiplosDois)
+*/
 
+// b.
+/*
+const arrayDeNumeros = [1, 2, 3, 4, 5, 6]
+
+const arrayMultiplosTres = arrayDeNumeros.map ((numero, idx, arrayDeNumeros) =>{
+    
+    const novoArrayDeNumeros = numero * 3  
+
+})
+*/
+
+
+// c.
+
+const arrayDeNumeros = [1, 2, 3, 4, 5, 6]
+
+const arrString = arrayDeNumeros.map ((numero, idx, arrayDeNumeros) =>{
+    if (numero % 2 === 0){
+        return `${numero} é par`
+    }else{
+        return `${numero} é impar`
+    }
+})
+
+
+console.log(arrString)
 
