@@ -237,14 +237,14 @@ const arrayDeNumeros = [1, 2, 3, 4, 5, 6]
 
 const arrayMultiplosTres = arrayDeNumeros.map ((numero, idx, arrayDeNumeros) =>{
     
-    const novoArrayDeNumeros = numero * 3  
+    return `${numero * 3}` 
 
 })
+
 */
 
-
 // c.
-
+/*
 const arrayDeNumeros = [1, 2, 3, 4, 5, 6]
 
 const arrString = arrayDeNumeros.map ((numero, idx, arrayDeNumeros) =>{
@@ -254,7 +254,6 @@ const arrString = arrayDeNumeros.map ((numero, idx, arrayDeNumeros) =>{
         return `${numero} é impar`
     }
 })
+*/
 
-
-console.log(arrString)
 
