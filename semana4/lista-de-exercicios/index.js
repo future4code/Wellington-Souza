@@ -311,13 +311,30 @@ const consultas = [
 ]
 
 const marcaConsultas = consultas.filter ((consulta) =>{
-       
-
+       if (consulta.cancelada === false && consulta.genero === "masculino"){
+           console.log(`Olá, Sr. ${consulta.nome}. Estamos enviando esta mensagem para lembrá-lo da
+           sua consulta no dia ${consulta.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`)
+       }else if(consulta.cancelada === false && consulta.genero === "feminino"){
+        console.log(`Olá, Sra. ${consulta.nome}. Estamos enviando esta mensagem para lembrá-la da
+        sua consulta no dia ${consulta.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`)
+       }
 })
+
+const cancelConsultas = consultas.filter ((consulta) =>{
+    if (consulta.cancelada === true && consulta.genero === "masculino"){
+        console.log(`Olá, Sr. ${consulta.nome}. Infelizmente, sua consulta marcada para o dia ${consulta.dataDaConsulta}
+        foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la.`)
+    }else if(consulta.cancelada === true && consulta.genero === "feminino"){
+        console.log(`Olá, Sra. ${consulta.nome}. Infelizmente, sua consulta marcada para o dia ${consulta.dataDaConsulta}
+        foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la.`)
+    }
+})
+
+console.log(marcaConsultas, cancelConsultas)
 */
 
 // EXERCICIO 5 :
-
+/*
 const contas = [
 	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
 	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
@@ -341,4 +358,4 @@ contas.forEach ((objeto, idx, compras) =>{
 })
 
 console.log(contas)
-
+*/
