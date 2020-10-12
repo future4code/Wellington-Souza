@@ -107,11 +107,13 @@ while (i < quanntidadeDeNumerosPares){
 
  // EXERCICIO 1 :
 
-/* let arrNumeros = [20, 55, 16, 13, 11, 50, 32, 45, 89]
+/*let arrNumeros = [20, 55, 16, 13, 11, 50, 32, 45, 89]
+
 
  let verificaNumerosMaiorEmenor = () =>{
 
     for (let numero = 0; numero < arrNumeros.length; numero++){
+        
         
     }
  }
@@ -298,3 +300,45 @@ const naoAltoriza = pessoas.filter ((pessoa, index, pessoas) =>{
     
 })
 */
+
+// EXERCICIO 4 :
+/*
+const consultas = [
+	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+]
+
+const marcaConsultas = consultas.filter ((consulta) =>{
+       
+
+})
+*/
+
+// EXERCICIO 5 :
+
+const contas = [
+	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+	{ cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+	{ cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+	{ cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
+]
+
+
+contas.forEach ((objeto, idx, compras) =>{
+    let somaDasCompras = 0
+
+    for (let compra of objeto.compras){
+        somaDasCompras += compra
+    }
+    
+    let resultado = objeto.saldoTotal - somaDasCompras
+    objeto.saldoTotal = resultado
+    
+})
+
+console.log(contas)
+
