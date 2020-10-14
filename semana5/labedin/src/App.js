@@ -61,7 +61,10 @@ function App() {
 
       <div>
         <h2>Habilidades</h2>
-        <Habilidades texto="Criativo" />
+        <div>
+          <Habilidades texto="Sou autoditada, criativo, persistente."/>
+          
+        </div>
         
 
       </div>

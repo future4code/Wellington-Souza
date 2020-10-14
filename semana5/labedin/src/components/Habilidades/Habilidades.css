@@ -4,21 +4,12 @@
     border: 1px solid black;
     padding: 20px 10px;
     margin-bottom: 10px;
+    width: 590px;
     height: 200px;
 }
 
-.habilidades > img {
-    width: 70px;
-    margin-right: 10px;
-    border-radius: 10%;
-}
-
-.habilidades h4 {
-    margin-bottom: 15px;
-}
-
-.habilidades > div {
-    display: flex;
-    flex-direction: column;
-    justify-items: flex-start;
+.habilidades p {
+    
+    margin: 0 auto;
+    padding-bottom: 16px;
 }
