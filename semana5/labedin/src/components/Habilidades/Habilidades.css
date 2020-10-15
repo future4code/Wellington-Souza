@@ -1,0 +1,15 @@
+.habilidades {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    width: 590px;
+    height: 200px;
+}
+
+.habilidades p {
+    
+    margin: 0 auto;
+    padding-bottom: 16px;
+}
