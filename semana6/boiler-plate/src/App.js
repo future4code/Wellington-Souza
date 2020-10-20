@@ -20,7 +20,7 @@ const InputsContainer = styled.div`
 
 class App extends React.Component {
     state = {
-      tarefas: [],
+      tarefas: [    ],
       inputValue: '',
       filtro: ''
     }
@@ -36,12 +36,11 @@ class App extends React.Component {
 
   };
 
-  componentDidMount() {
-      const tarefaString = localStorage.getItem("tarefa")
-      const tarefaObjeto = JSON.parse(tarefaString)
-
-      this.setState({inputValue: tarefaObjeto.texto})
-  };
+  componentDidMount = () => {
+    if (localStorage.getItem("tarefas")) {
+      this.setState({tarefas: JSON.parse(localStorage.getItem("tarefas"))})
+    }
+  }
 
   onChangeInput = (event) => {
     this.setState({inputValue: event.target.value})
