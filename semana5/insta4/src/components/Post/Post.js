@@ -11,6 +11,7 @@ import iconeBookMarkBranco from '../../img/bookmarks.svg'
 import iconeBookMarkPreto from '../../img/bookmarks2.svg'
 
 class Post extends React.Component {
+    
   state = {
     curtido: false,
     numeroCurtidas: 0,
