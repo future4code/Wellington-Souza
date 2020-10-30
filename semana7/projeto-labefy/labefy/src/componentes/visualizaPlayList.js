@@ -34,7 +34,7 @@ class VisualizaList extends react.Component{
                 Authorization: "wellington-brito-dumont"
             }
         }).then((resposta)=>{
-            console.log(resposta.data)
+            this.setState({trackList: resposta.data})
         }).catch((error)=>{
             console.log(error.message)
         })
