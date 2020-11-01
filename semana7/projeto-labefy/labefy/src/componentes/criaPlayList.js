@@ -1,7 +1,15 @@
-import Axios from 'axios';
 import react from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import styled from "styled-components"
 
+
+const Botao = styled.button `
+    margin-left: 2px;
+    border: none;
+    background-color: orange;
+    height: 24px;
+    color: white;
+`
 
 class CriaPlayList extends react.Component{
 
@@ -34,14 +42,14 @@ class CriaPlayList extends react.Component{
         
         return(
             <div>
-                <div>
+               
                     <input 
                         placeholder="Nome da playlist" 
                         value={this.state.nameValue}
                         onChange={this.onChangeCriaPlayList}               
                     />
-                    <button onClick={this.criaPlayList}>Criar Playlist</button>
-                 </div>
+                    <Botao onClick={this.criaPlayList}>Criar Playlist</Botao>
+                
                         
             </div>
             
