@@ -1,15 +1,14 @@
 import react from 'react';
 import axios from 'axios';
+import Detalhes from './Detalhes';
 
 class VisualizaList extends react.Component{
     state= {
         playList:[],
         trackList: [],
         abreList: false,
-        nameValue: "",
-        artistValue: "",
-        urlValue: ""
-        
+        playListId: ""
+               
     }
    // PEGA A PLAYLIST ----------------------------------
     pegaPlayList = () => {
@@ -39,7 +38,7 @@ class VisualizaList extends react.Component{
             }
         }).then((resposta)=>{
             console.log(resposta.data.result.tracks)
-            this.setState({trackList: resposta.data.result.tracks})
+            this.setState({trackList: resposta.data.result.tracks, playListId: trackId})
         }).catch((error)=>{
             console.log(error.message)
         })
@@ -60,39 +59,6 @@ class VisualizaList extends react.Component{
             console.log(error.message)
         })
     }
-// ADICIONA MÚSICAS NA PLAYLIST ------------------------
-
-    criaMusica = (playListId) => {
-        const body = {
-            name: this.state.nameValue,
-            artist: this.state.artistValue,
-            url: this.state.urlValue
-        }
-
-        axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${playListId}/tracks`, body, {
-            headers: {
-                Authorization: "wellington-brito-dumont"
-            }
-        }).then((resposta)=>{
-            alert("Musica adicionada com sucesso")
-            this.setState({nameValue:"", artistValue:"", urlValue:""})
-            this.getTrackList()
-        }).catch((erro)=>{
-            console.log(erro.message)
-        })
-    }
-
-    onChangeNameMusica = (event) =>{
-        this.setState({nameValue: event.target.value})
-    }
-
-    onChangeArtistMusica = (event) =>{
-        this.setState({artistValue: event.target.value})
-    }
-
-    onChangeUrlMusica = (event) =>{
-        this.setState({urlValue: event.target.value})
-    }
 
     render(){
         const renderList = this.state.playList.map((lista) => {
@@ -107,52 +73,17 @@ class VisualizaList extends react.Component{
               </p>
             );
           });
-         
-         const renderTrack = this.state.trackList.map((track)=>{
-             return(
-                <div>
-                   
-                    <div>
-                        <p key={track.name}>Música: {track.name}</p>
-                        <p key={track.artist}>Artista: {track.artist}</p>
-                        <audio 
-                        key={track.url}
-                        controls src={track.url}
-                        />
-
-                    </div>
-                </div>
-             )
-         })
-         
+                           
         return(
-            <div>
-                {this.state.abreList === true ? 
-                    <div>
-                        <input 
-                            placeholder="Digite o nome da musica"
-                            value={this.state.nameValue}
-                            onChange={this.onChangeNameMusica}
-                        />
-                        <input 
-                            placeholder="Digite o nome da Banda/Cantor(a)"
-                            value={this.state.artistValue}
-                            onChange={this.onChangeArtistMusica}
-                        />
-                        <input 
-                            placeholder="Digite a url da música"
-                            value={this.state.urlValue}
-                            onChange={this.onChangeUrlMusica}
-                        />
-                        
-                        <button onClick={(playList)=>this.criaMusica(playList.id)}>Adicionar Música</button>
-                        <div>
-                            {renderTrack}
-                        </div>
-                    </div>
-                    
-                 : renderList}
+           this.state.abreList === true ? 
+            <Detalhes 
+            trackList={this.state.trackList} 
+            playListId = {this.state.playListId}
+        /> : <div>
+                {renderList}
             </div>
+        
+        
         )
     }
 }
