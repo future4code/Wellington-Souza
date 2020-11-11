@@ -39,7 +39,7 @@ export default function ListaLike (props){
         <ListContainer >
             <ListHeader>
                 <IconeBack>
-                    <img src={Back} alt="Voltar" />
+                    <img src={Back} onClick={props.inicio} alt="Voltar" />
                 </IconeBack>
                 <ImagemLogo>
                     <img src={Logo} alt="Astro Match" />
