@@ -1,24 +1,17 @@
 import React from 'react'
-import {MainContainer, Header, TripContainer, CardTrip} from './HomePageStyle'
+import PrincipalContainer from '../../Componentes/ContainerSecundary/ConteinerSecundary'
+import Header from '../../Componentes/Header/Header'
+import { ButtonLogin, MainContainer, ButtonTripApp, ImageBackground, TittleInitial } from './HomePageStyle'
+
 
 
 function HomePage () {
+   
+
     return(
         <MainContainer>
-            <Header>
-                <h1>LabeX</h1>
-                <nav>
-                    <p>Login</p>
-                </nav>
-            </Header>
-            <TripContainer>
-                <CardTrip>
-                    <img src="https://picsum.photos/322/200" alt="Imagem" />
-                    <h3>Ano novo em Mercúrio</h3>
-                    <button>Detalhes</button>
-                </CardTrip>
-                
-            </TripContainer>
+            <Header></Header>
+            <PrincipalContainer/>      
         </MainContainer>
     )
 }

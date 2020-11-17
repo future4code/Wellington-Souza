@@ -1,12 +1,9 @@
 import React from 'react'
-import HomePage from "./Pages/HomePage/HomePage"
+import Router from './Router/Router'
+
 
 function App() {
-  return (
-    <div className="App">
-      <HomePage />
-    </div>
-  );
+  return <Router />  
 }
 
 export default App;

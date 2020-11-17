@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-function DetailsPage () {
+function LoginPage () {
     return(
         <div>
-            Detalhes
+            Login
         </div>
     )
 }
 
-export default DetailsPage
+export default LoginPage

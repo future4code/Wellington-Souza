@@ -1,57 +1,19 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
+import img from "../../assets/spacex.png"
+
+
 
 export const MainContainer = styled.div`
-    background-color: #fcfcfc;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    
-     
-`
-
-export const Header = styled.header`
-    background-color: #F9B24E;
-    width: 100vw;
-    height: 10vh;
-    top: 0; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    h1{
-        color: #ffffff;
-        margin-left: 64px;
-    }
-
-    nav{
-        color: #ffffff;
-        margin-right: 64px;
-    }
-
-`
-
-export const TripContainer = styled.div`
-    background-color: #f4f4f4;
-    display: flex;
-    flex-wrap: wrap;
+   background-color: #000000; 
+   width: 100vw;
+   height: 100vh; 
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   background-image: url(${img});
+   background-repeat: no-repeat;
+   background-position: right;
+   background-size: 1000px;
     
 `
-
-export const CardTrip = styled.section`
-    background-color: #ffffff;
-    border: 1px solid #e2e2e2;
-    width: 322px;
-    height: 271px;
-    border-radius: 5px;
-    margin: 32px auto;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-   
-`
-
-
