@@ -15,7 +15,7 @@ function Header () {
     return(
         <ContainerHeader>
             <Logo>LabeX</Logo>
-            <Nav onClick={goToLogin}>Login</Nav>
+            <Nav onClick={goToLogin}>Login Administrador</Nav>
         </ContainerHeader>
     )
 }

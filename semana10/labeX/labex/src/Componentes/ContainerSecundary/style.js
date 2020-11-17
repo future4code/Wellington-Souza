@@ -51,6 +51,6 @@ export const ButtonLogin = styled.button`
 
     :hover{
         background-color: #efefef;
-        color: #000000;
+        color: #444444;
     }
 `
