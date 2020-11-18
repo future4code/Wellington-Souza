@@ -7,6 +7,7 @@ import HomePage from '../Pages/HomePage/HomePage'
 import TripPage from '../Pages/ListTripsPage/ListTripPage'
 import LoginPage from '../Pages/LoginPage/LoginPage'
 import DetailsPage from '../Pages/TripDetailsPage/TripDetailsPage'
+import PageAdm from '../Pages/PageAdm/PageAdm'
 
 
 function Router (){
@@ -19,8 +20,11 @@ function Router (){
                 <Route exact path="/login">
                     <LoginPage />
                 </Route>
-                <Route exact path="/trip/details">
+                <Route exact path="/trip/details/">
                     <DetailsPage />
+                </Route>
+                <Route exact path="/trip/list-adm">
+                    <PageAdm/>
                 </Route>
                 <Route exact path="/trip/list">
                     <TripPage/>

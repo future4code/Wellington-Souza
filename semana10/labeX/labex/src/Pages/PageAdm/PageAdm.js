@@ -2,14 +2,20 @@ import axios from 'axios'
 import React, {useState, useEffect} from 'react'
 import { useHistory } from 'react-router-dom'
 import Header from '../../Componentes/Header/Header'
-import Card from '../../Componentes/TripCard/Card'
-import { ContainerTrip, ImgContainer, SubleTitle, TripCard, ButtonApplyTrip, CardContainer } from './TripListStyle'
+import CardAdm from '../../Componentes/TripCard/CardAdm'
+import { useProtectedPage } from '../../hooks/useProtectdPage'
+import { ContainerTrip, CardContainer } from './PageAdmStyle'
 
 
 
-function TripPage () {
+function PageAdm () {
 
     const [allTrip, setAllTrip] = useState([])
+   
+    const history = useHistory()
+       
+
+    useProtectedPage();
 
     useEffect(() => {
         getAllTrip()
@@ -24,8 +30,21 @@ function TripPage () {
         })
     }  
     
-    const history = useHistory()
+    const getTripDetails = (id) =>{
+        axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/wellington-dumont/trip/${id}`,{
+           headers:{
+               auth: localStorage.getItem("token")
+           } 
+        })
+         .then((response)=>{
+             console.log(response.data.trip)
+             history.push("/trip/details/")
+         }).catch((error)=>{
+             console.log(error)
+         })
+     }
 
+    
     const goToAplicationTrip = () =>{
         history.push("/aplication-form")
     }
@@ -42,27 +61,28 @@ function TripPage () {
         <ContainerTrip>
             <Header />
             <hr/>
+            
             <CardContainer>
+            
               {allTrip.map((trip)=>{
                   return(
-                    <Card 
+                    <CardAdm 
                         goToForm={goToAplicationTrip}
                         name={trip.name}
                         duration={trip.durationInDays}
                         key={trip.id}
                         date={trip.date}
+                        goToDetails={()=>getTripDetails(trip.id)}
+
                     />   
                   )
               })}
               
             </CardContainer>        
             
-            {/* <button onClick={goToAplicationTrip}>Aplicar Viagens</button>
-            <button onClick={goToDetailsTrip}>Detalhes da Viagem</button>
-            <button onClick={goToCreateTrip}>Criar Viagens</button> */}
         </ContainerTrip>   
         
     )
 }
 
-export default TripPage
+export default PageAdm

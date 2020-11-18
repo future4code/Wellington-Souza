@@ -20,7 +20,7 @@ function PrincipalContainer () {
             <TittleInitial>Prepare-se para a aventura</TittleInitial>
             <Paragraph>Venha conhecer nossas viagens espaciais.</Paragraph>
             <ButtonTrip onClick={goToTripList}>Aplicar viagens</ButtonTrip>
-            <ButtonLogin onClick={goToLogin}>Entrar</ButtonLogin>
+            <ButtonLogin onClick={goToLogin}>Área do Administrador</ButtonLogin>
         </ContainerSecundary>
     )
 }

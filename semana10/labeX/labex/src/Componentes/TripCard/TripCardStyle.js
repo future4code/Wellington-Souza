@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 export const TripCard = styled.section`
     width: 322px;
-    height: 300px;
+    height: 375px;
     border: 1px solid #444444;
     margin-left: 64px;
     margin-top: 80px;
@@ -12,6 +12,11 @@ export const TripCard = styled.section`
     flex-direction: column;
     align-items: center;
     padding: 8px;
+
+    p{
+        color: #ffffff;
+        margin-top: -5px;
+    }
 `
 
 export const ImgContainer = styled.div`
@@ -34,6 +39,7 @@ export const ButtonApplyTrip = styled.button`
     height: 60px;
     border-radius: 10px;
     cursor: pointer;
+    margin-top: 10px;
 
     :hover{
         background-color: #444444;

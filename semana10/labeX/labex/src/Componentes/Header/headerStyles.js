@@ -22,4 +22,6 @@ export const Nav = styled.p`
     color: #ffffff;
     margin-right: 64px;
     cursor: pointer;
+    
+
 `

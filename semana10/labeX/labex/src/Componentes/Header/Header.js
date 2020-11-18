@@ -8,15 +8,23 @@ function Header () {
 
     const history = useHistory()
 
-    const goToLogin = () => {
-        history.push("/login")
+    const goToHome = () => {
+        history.push("/")
     }
+
+    const goToTripList = () => {
+        history.push("/trip/list")
+    }
+
 
     return(
         <ContainerHeader>
             <Logo>LabeX</Logo>
-            <Nav onClick={goToLogin}>Login Administrador</Nav>
-        </ContainerHeader>
+            <Nav onClick={goToHome}>Home</Nav>
+            <Nav onClick={goToTripList}>Viagens</Nav>
+            
+
+         </ContainerHeader>
     )
 }
 
