@@ -13,6 +13,8 @@ function PageAdm () {
     const [allTrip, setAllTrip] = useState([])
    
     const history = useHistory()
+
+    
        
 
     useProtectedPage();
@@ -38,7 +40,7 @@ function PageAdm () {
         })
          .then((response)=>{
              console.log(response.data.trip)
-             history.push("/trip/details/")
+             history.push(`/trip/details/${id}`)
          }).catch((error)=>{
              console.log(error)
          })
@@ -46,7 +48,7 @@ function PageAdm () {
 
     
     const goToAplicationTrip = () =>{
-        history.push("/aplication-form")
+        history.push("/aplication-form/")
     }
 
     const goToDetailsTrip = () =>{

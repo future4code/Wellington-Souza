@@ -39,7 +39,7 @@ export const FormTitle = styled.h3`
 export const ParagraphForm = styled.p`
     text-align: center;
 `
-export const DivContainerForm = styled.div`
+export const FormContainer = styled.form`
     width: 380px;
     justify-content: center;
     margin-top: 20px;

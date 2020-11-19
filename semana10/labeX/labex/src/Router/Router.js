@@ -20,7 +20,7 @@ function Router (){
                 <Route exact path="/login">
                     <LoginPage />
                 </Route>
-                <Route exact path="/trip/details/">
+                <Route exact path="/trip/details/:id">
                     <DetailsPage />
                 </Route>
                 <Route exact path="/trip/list-adm">
@@ -29,7 +29,7 @@ function Router (){
                 <Route exact path="/trip/list">
                     <TripPage/>
                 </Route>
-                <Route exact path="/aplication-form">
+                <Route exact path="/aplication-form/:id">
                     <FormPage />
                 </Route>
                 <Route exact path="/trip/create">
