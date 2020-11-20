@@ -18,9 +18,14 @@ export const Logo = styled.h1 `
 
 `
 
+export const Menu = styled.nav`
+    display: flex;
+    margin-right: 64px;
+`
+
 export const Nav = styled.p`
     color: #ffffff;
-    margin-right: 64px;
+    margin-right: 16px;
     cursor: pointer;
     
 

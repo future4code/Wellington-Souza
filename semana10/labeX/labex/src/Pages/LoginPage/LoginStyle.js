@@ -17,7 +17,7 @@ export const LogoLabeX = styled.h1`
 
 export const ContainerFormLogin = styled.div`
     width:400px;
-    height: 350px;
+    height: 380px;
     border-radius: 10px;
     background-color: #e8e8e8;
     display: flex;
@@ -63,4 +63,17 @@ export const ButtonAdm = styled.button`
         background-color: #efefef;
         color: #444444;
     }
+`
+
+export const GoBack = styled.p`
+    width: 272px;
+    height: 60px;
+    color: #000000;
+    border: none;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+
 `

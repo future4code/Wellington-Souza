@@ -1,6 +1,6 @@
 import React from 'react'
 import {useHistory} from "react-router-dom"
-import { ContainerHeader, Logo, Nav } from './headerStyles'
+import { ContainerHeader, Logo, Menu, Nav } from './headerStyles'
 
 
 
@@ -16,13 +16,18 @@ function Header () {
         history.push("/trip/list")
     }
 
+    const goToLogin = () => {
+        history.push("/login")
+    }
 
     return(
         <ContainerHeader>
             <Logo>LabeX</Logo>
-            <Nav onClick={goToHome}>Home</Nav>
-            <Nav onClick={goToTripList}>Viagens</Nav>
-            
+            <Menu>
+                <Nav onClick={goToHome}>Home</Nav>
+                <Nav onClick={goToTripList}>Viagens</Nav>
+                <Nav onClick={goToLogin}>Administrador</Nav>
+            </Menu>
 
          </ContainerHeader>
     )

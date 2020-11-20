@@ -4,18 +4,18 @@ import styled from 'styled-components'
 export const ContainerTrip = styled.div`
     height: 100vh;
     background-color: #000000;
-
-    hr{
-        color:#ffffff;
-        opacity: 5%;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 `
+
 
 export const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #161616;
+    background-color: #000000;
 `
 
 export const TripCreate = styled.button`
@@ -23,11 +23,11 @@ export const TripCreate = styled.button`
     color: #000000;
     font-size: 16px;
     border: none;
-    width: 322px;
-    height: 60px;
+    width: 200px;
+    height: 50px;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 10px;
+    
     
 
     :hover{

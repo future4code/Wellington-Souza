@@ -1,8 +1,9 @@
 import Axios from 'axios'
 import React, {useState, useEffect} from 'react'
 import { useHistory } from 'react-router-dom'
+import Header from '../../Componentes/Header/Header'
 import { Logo } from '../../Componentes/Header/headerStyles'
-import { ButtonAdm, ContainerFormLogin, ContainerLogin, FormLogin, FormTitle, LogoLabeX, ParagraphLogin } from './LoginStyle'
+import { ButtonAdm, ContainerFormLogin, ContainerLogin, FormLogin, FormTitle, LogoLabeX, ParagraphLogin, GoBack } from './LoginStyle'
 
 
 function LoginPage () {
@@ -10,6 +11,10 @@ function LoginPage () {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const history = useHistory()
+
+    const goToHome = () => {
+        history.push("/")
+    }
 
     useEffect(()=>{
         const token = localStorage.getItem("token")
@@ -47,6 +52,7 @@ function LoginPage () {
 
     return(
         <ContainerLogin>
+            
             <LogoLabeX>LabeX</LogoLabeX>
             <ContainerFormLogin>
                 <FormTitle>Login</FormTitle>
@@ -64,6 +70,7 @@ function LoginPage () {
                     onChange={handlePassowrd}
                 />
                 <ButtonAdm onClick={goLogin}>Entrar</ButtonAdm>
+                <GoBack onClick={goToHome}>Voltar</GoBack>
             </ContainerFormLogin>
         </ContainerLogin>
     )

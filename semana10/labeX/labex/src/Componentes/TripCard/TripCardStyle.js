@@ -2,15 +2,14 @@ import React from "react"
 import styled from "styled-components"
 
 export const TripCard = styled.section`
-    width: 322px;
-    height: 375px;
+    width: 200px;
+    height: 200px;
     border: 1px solid #444444;
     margin-left: 64px;
     margin-top: 80px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 8px;
 
     p{
@@ -19,11 +18,6 @@ export const TripCard = styled.section`
     }
 `
 
-export const ImgContainer = styled.div`
-    width: 302px;
-    height: 200px;
-    
-`
 
 export const SubleTitle = styled.h3 `
     font-size: 16px;
@@ -35,7 +29,7 @@ export const ButtonApplyTrip = styled.button`
     color: #000000;
     font-size: 16px;
     border: none;
-    width: 322px;
+    width: 200px;
     height: 60px;
     border-radius: 10px;
     cursor: pointer;
