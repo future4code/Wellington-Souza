@@ -6,7 +6,7 @@ export const ContainerTrip = styled.div`
     background-color: #000000;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;    
     
 `
 
@@ -15,11 +15,10 @@ export const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #000000;
 `
 
 export const TripCreate = styled.button`
-    background-color: #ffffff;
+    background-color: #f4b129;
     color: #000000;
     font-size: 16px;
     border: none;
@@ -27,6 +26,8 @@ export const TripCreate = styled.button`
     height: 50px;
     border-radius: 10px;
     cursor: pointer;
+    align-content: center;
+    margin-top: 50px;
     
     
 

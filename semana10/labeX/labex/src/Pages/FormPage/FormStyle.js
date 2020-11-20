@@ -81,9 +81,9 @@ export const FormCountry = styled.select`
 export const ButtonGoTrip = styled.button`
     width: 272px;
     height: 60px;
-    border: 1px solid #ffffff;
-    background-color: #000000;
-    color: #ffffff;
+    border: none;
+    background-color: #f4b129;
+    color: #000000;
     border-radius: 10px;
     margin-top: 32px;
     font-size: 24px;
@@ -91,7 +91,22 @@ export const ButtonGoTrip = styled.button`
     cursor: pointer;
 
     :hover{
-        background-color: #efefef;
-        color: #444444;
+        background-color: #000000;
+        color: #ffffff;
     }
+
+`
+
+export const GoBack = styled.p`
+    width: 272px;
+    height: 60px;
+    color: #000000;
+    border: none;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 50px;
+
 `

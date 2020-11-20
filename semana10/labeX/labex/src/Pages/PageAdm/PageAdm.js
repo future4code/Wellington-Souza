@@ -49,28 +49,30 @@ function PageAdm () {
     }
 
     return(
-        <ContainerTrip>
+        <div>
             <Header />
-             
-            <CardContainer>
+            <ContainerTrip>
                 <TripCreate onClick={goToCreateTrip}>Criar Viagens</TripCreate>
-              {allTrip.map((trip)=>{
-                  return(
-                    <CardAdm 
-                        
-                        name={trip.name}
-                        duration={trip.durationInDays}
-                        key={trip.id}
-                        date={trip.date}
-                        goToDetails={()=>getTripDetails(trip.id)}
+                <CardContainer>
+                    
+                {allTrip.map((trip)=>{
+                    return(
+                        <CardAdm 
+                            
+                            name={trip.name}
+                            duration={trip.durationInDays}
+                            key={trip.id}
+                            date={trip.date}
+                            goToDetails={()=>getTripDetails(trip.id)}
 
-                    />   
-                  )
-              })}
-              
-            </CardContainer>        
+                        />   
+                    )
+                })}
+                
+                </CardContainer>   
+            </ContainerTrip>      
             
-        </ContainerTrip>   
+        </div>   
         
     )
 }

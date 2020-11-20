@@ -2,6 +2,9 @@ import Axios from 'axios'
 import React, { useState } from 'react'
 import axios from 'axios'
 import {useProtectedPage} from '../../hooks/useProtectdPage'
+import {FormContainer, ContainerForm, FormCreate, DivFormCreate, Planet, FormTitle, ButtonCreate, LogoLabeX} from '../CreateTripPage/CreateStyle'
+import { GoBack } from '../FormPage/FormStyle'
+import { useHistory } from 'react-router-dom'
 
 
 function CreateTripPage () {
@@ -13,6 +16,11 @@ function CreateTripPage () {
         const [date, setDate] = useState(null)
         const [durationInDays, setDurationInDays] = useState("")
         const [description, setDescription] = useState("")
+        const history = useHistory()
+
+        const goToHome = () => {
+            history.push("/")
+        }
 
         const handleName = (event) => {
             setName(event.target.value)
@@ -57,48 +65,61 @@ function CreateTripPage () {
         }
 
     return(
-        <div>
-            <form onSubmit={tripCreate}>
-                <input 
-                    placeholder="Nome"
-                    type="text"
-                    value={name}
-                    onChange={handleName}                    
+        <ContainerForm>
+            
+            <DivFormCreate>
+            
+                <FormTitle>Cadastrar viagens</FormTitle>
+                <FormContainer onSubmit={tripCreate}>
+                    <FormCreate 
+                        placeholder="Nome"
+                        type="text"
+                        value={name}
+                        onChange={handleName} 
+                        pattern="[A-Z a-z]{3,}"
+                        required                   
+                        />
+                        
+                    <Planet value={planet} onChange={handlePlanet}  >
+                        <option>Selecione um Planeta</option>
+                        <option>Mercúrio</option>
+                        <option>Venus</option>
+                        <option>Marte</option>
+                        <option>Plutão</option>
+                        <option>Saturno</option>
+                        <option>Júpter</option>
+                        <option>Netuno</option>
+                        <option>Urano</option>
+                        <option>Lua</option>
+                    </Planet>
+                    <FormCreate 
+                        placeholder="Data"
+                        type="date"
+                        value={date}
+                        onChange={handleDate} 
+                        min="2021-01-01"
+                        required 
                     />
-                    
-                <select value={planet} onChange={handlePlanet}  >
-                    <option>Selecione um Planeta</option>
-                    <option>Mercúrio</option>
-                    <option>Venus</option>
-                    <option>Marte</option>
-                    <option>Plutão</option>
-                    <option>Saturno</option>
-                    <option>Júpter</option>
-                    <option>Netuno</option>
-                    <option>Urano</option>
-                    <option>Lua</option>
-                </select>
-                <input 
-                    placeholder="Data"
-                    type="date"
-                    value={date}
-                    onChange={handleDate}  
-                />
-                <input 
-                    placeholder="Descrição"
-                    type="text"
-                    value={description}
-                    onChange={handleDescription}
-                />
-                <input 
-                    placeholder="Duração"
-                    type="text"
-                    value={durationInDays}
-                    onChange={handleDurations}  
-                />
-                <button>Criar</button>
-            </form>
-        </div>
+                    <FormCreate 
+                        placeholder="Descrição"
+                        type="text"
+                        value={description}
+                        onChange={handleDescription}
+                        pattern="[A-Z a-z]{30,}"
+                    />
+                    <FormCreate 
+                        placeholder="Duração"
+                        type="number"
+                        value={durationInDays}
+                        onChange={handleDurations} 
+                        min="50" 
+                        required
+                    />
+                    <ButtonCreate>Criar</ButtonCreate>
+                    <GoBack onClick={goToHome}>Voltar</GoBack>
+                </FormContainer>
+            </DivFormCreate>
+        </ContainerForm>
     )
    
 }

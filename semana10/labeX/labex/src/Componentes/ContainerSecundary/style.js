@@ -22,8 +22,8 @@ export const Paragraph = styled.p`
 export const ButtonTrip = styled.button`
     width: 272px;
     height: 60px;
-    border: 1px solid #ffffff;
-    background-color: #ffffff;
+    border: none;
+    background-color:#f4b129;
     color: #000000;
     border-radius: 10px;
     margin-left: 64px;
@@ -32,8 +32,8 @@ export const ButtonTrip = styled.button`
     cursor: pointer;
 
     :hover{
-        background-color: #000000;
-        color: #ffffff;
+        background-color: #ffffff;
+        color: #000000;
     }
 `
 
@@ -50,7 +50,8 @@ export const ButtonLogin = styled.button`
     cursor: pointer;
 
     :hover{
-        background-color: #efefef;
-        color: #444444;
+        background-color: #f4b129;
+        color: #000000;
+        border: none;
     }
 `

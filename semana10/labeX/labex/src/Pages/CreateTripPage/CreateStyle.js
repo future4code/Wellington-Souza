@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const ContainerLogin = styled.div`
+export const ContainerForm = styled.div`
     background-color: #000000;
     width: 100vw;
     height: 100vh;
@@ -15,14 +15,15 @@ export const LogoLabeX = styled.h1`
     color: #ffffff;
 `
 
-export const ContainerFormLogin = styled.div`
+export const DivFormCreate = styled.div`
     width:400px;
-    height: 380px;
+    height: 500px;
     border-radius: 10px;
     background-color: #e8e8e8;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly
 
     hr{
         border: 1px solid #d8d8d8;
@@ -35,20 +36,36 @@ export const FormTitle = styled.h3`
     text-align: center;
 
 `
-export const ParagraphLogin = styled.p`
-    text-align: center;
+
+export const FormContainer = styled.form`
+    width: 380px;
+    justify-content: center;
+    margin-top: 20px;
 `
 
-export const FormLogin = styled.input`
+export const FormCreate = styled.input`
     border: 1px solid #d8d8d8;
     width: 350px;
     height: 35px;
     border-radius: 5px;
     margin-bottom: 8px;
     padding: 5px;
+    margin-left: 10px;
 `
 
-export const ButtonAdm = styled.button`
+
+export const Planet = styled.select`
+    width: 360px;
+    height: 48px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    padding: 5px;
+    border: 1px solid #d8d8d8;
+    margin-left: 10px;
+    
+`
+
+export const ButtonCreate = styled.button`
     width: 272px;
     height: 60px;
     border: none;
@@ -57,12 +74,14 @@ export const ButtonAdm = styled.button`
     border-radius: 10px;
     margin-top: 32px;
     font-size: 24px;
+    margin-left: 50px;
     cursor: pointer;
 
     :hover{
         background-color: #000000;
         color: #ffffff;
     }
+
 `
 
 export const GoBack = styled.p`
@@ -75,5 +94,6 @@ export const GoBack = styled.p`
     font-size: 16px;
     cursor: pointer;
     text-align: center;
+    margin-left: 50px;
 
 `

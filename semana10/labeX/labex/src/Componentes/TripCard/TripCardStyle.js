@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 
 export const TripCard = styled.section`
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 190px;
     border: 1px solid #444444;
     margin-left: 64px;
     margin-top: 80px;
@@ -11,6 +11,8 @@ export const TripCard = styled.section`
     display: flex;
     flex-direction: column;
     padding: 8px;
+    justify-content: center;
+    align-items: center;
 
     p{
         color: #ffffff;
@@ -30,13 +32,14 @@ export const ButtonApplyTrip = styled.button`
     font-size: 16px;
     border: none;
     width: 200px;
-    height: 60px;
+    height: 45px;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 20px;
+    
 
     :hover{
-        background-color: #444444;
-        color: #ffffff;
+        background-color: #f4b129;
+        color: #000000;
     }
 `

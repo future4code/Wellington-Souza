@@ -24,7 +24,7 @@ export const Menu = styled.nav`
 `
 
 export const Nav = styled.p`
-    color: #ffffff;
+    color: #f4b129;
     margin-right: 16px;
     cursor: pointer;
     

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from "axios"
-import { ContainerForm, DivFormAplly , LogoLabeX, FormTitle,ParagraphForm, FormApply, FormAge, FormCountry, FormContainer, ButtonGoTrip } from './FormStyle'
+import { ContainerForm, DivFormAplly , LogoLabeX, FormTitle,ParagraphForm, FormApply, FormAge, FormCountry, FormContainer, ButtonGoTrip, GoBack } from './FormStyle'
 import { useHistory, useParams } from 'react-router-dom'
 
 
@@ -12,9 +12,14 @@ function FormPage () {
    const [country, setCountry] = useState(null) 
    const [profession, setProfession] = useState("") 
    const [applicationText, setApllicationText] = useState("") 
+   const history = useHistory()
 
    const pathParams = useParams()
    const id = pathParams.id
+
+   const goToHome = () => {
+    history.push("/")
+}
          
    const handleName = (event) => {
        setName(event.target.value)
@@ -127,6 +132,7 @@ function FormPage () {
                         required
                     />
                    <ButtonGoTrip>Enviar</ButtonGoTrip>
+                   <GoBack onClick={goToHome}>Voltar</GoBack>
                 </FormContainer>
             </DivFormAplly>
         </ContainerForm>
