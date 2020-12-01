@@ -14,7 +14,7 @@ const SignUpPage = () => {
         const token = localStorage.getItem('token')
 
         if(token){
-            history.push("/feeds")
+            history.push("/")
         }
     },[history])
 

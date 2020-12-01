@@ -36,7 +36,7 @@ const LoginPage = () => {
         axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labEddit/login', body)
             .then((response)=>{
                 localStorage.setItem("token", response.data.token)
-                history.push("/feeds")
+                history.push("/")
             }).catch((error)=>{
                 console.log(error)
             })

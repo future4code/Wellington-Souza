@@ -12,10 +12,10 @@ const Router = () => {
             
             <Switch>
 
-                <Route exact path="/feeds">
+                <Route exact path="/">
                     <FeedsPostPage />
                 </Route>
-                <Route exact path="/">
+                <Route exact path="/login">
                     <LoginPage />
                 </Route>
                 <Route exact path="/cadastro">

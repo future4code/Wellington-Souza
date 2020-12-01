@@ -9,7 +9,7 @@ export function useProtectedPage () {
 
 
         if (!token) {
-            history.push("/")
+            history.push("/login")
         }
 
     },[history])
