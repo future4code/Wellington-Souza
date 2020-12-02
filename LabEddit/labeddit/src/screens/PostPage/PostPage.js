@@ -3,6 +3,8 @@ import react, { useEffect, useState } from 'react'
 import  {useProtectedPage } from '../../hooks/UseProtectPage/UseProtectPage'
 import {useParams} from 'react-router-dom'
 
+
+
 const PostPage = () => {
 
     const [post, setPost] = useState({})
@@ -58,7 +60,7 @@ const PostPage = () => {
     
 
     return(
-        <div>
+            
             <div>
                 <p>{post.username}</p>
                 <p>{post.title}</p>
@@ -92,7 +94,7 @@ const PostPage = () => {
                 
 
             </div>
-        </div>
+        
     )
 }
 

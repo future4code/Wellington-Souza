@@ -8,8 +8,7 @@ import SignUpPage from "../screens/SignUpPage/SignUpPage"
 
 const Router = () => {
     return(
-       <BrowserRouter>
-            
+                  
             <Switch>
 
                 <Route exact path="/">
@@ -28,7 +27,7 @@ const Router = () => {
 
             </Switch>
        
-       </BrowserRouter>
+       
     )
 }
 

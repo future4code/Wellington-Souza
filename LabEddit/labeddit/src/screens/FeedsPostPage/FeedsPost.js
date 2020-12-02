@@ -2,6 +2,11 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useProtectedPage } from '../../hooks/UseProtectPage/UseProtectPage'
+import { FeedsContainer } from './FeedsStyles'
+import CardPost from "../../components/CardPost/CardPost"
+import { render } from '@testing-library/react'
+import { PubContainer } from '../../components/Form/FormPostStyle'
+import  PostForm  from '../../components/Form/PostForm'
 
 const FeedsPostPage = () => {
 
@@ -27,7 +32,6 @@ const FeedsPostPage = () => {
                 Authorization: localStorage.getItem("token")
             }
         }).then((response)=>{
-            console.log(response.data)
             setPosts(response.data.posts)
         }).catch((error)=>{
             console.log(error)
@@ -65,43 +69,16 @@ const FeedsPostPage = () => {
             console.log(erro)
         })
             
-    }
-
-    const votePost = (id) => {
-        const body = {
-            direction: 1
-        }
-
-        axios.put(`https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts/${id}/vote`, body,{
-            headers:{
-                Authorization: localStorage.getItem('token')
-            }
-        }).then((res)=>{
-            console.log("Funcionou")
-        }).catch((err)=>{
-            console.log(err.message)
-        })
-    }
-
-    const noVotePost = (id) => {
-        const body = {
-            direction: -1
-        }
-
-        axios.put(`https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts/${id}/vote`, body,{
-            headers:{
-                Authorization: localStorage.getItem('token')
-            }
-        }).then((res)=>{
-            console.log("Funcionou")
-        }).catch((err)=>{
-            console.log(err.message)
-        })
-    }
+    } 
+    
 
     return(
-        <div>
-            <form onSubmit={createPost}>
+        <FeedsContainer>
+            <PostForm
+                
+            
+            />
+            {/* <form onSubmit={createPost}>
                 <label>Titulo do post:</label>
                 <input
                     name="title"
@@ -119,25 +96,33 @@ const FeedsPostPage = () => {
                     onChange={handleInputChange}
                 />
                 <button>Postar</button>
-            </form>
-            <div>
-                {posts.map((post)=>{
-                    return(
-                        <div key={post.id}>
-                            <h2>{post.title}</h2>
-                            <h4>{post.username}</h4>
-                            <p>{post.text}</p>
-                            <p>{post.commentsCount}</p>
-                            <p>{post.votesCount}</p>
-                            <button onClick={()=>detailPost(post.id)}>Abrir Post</button>
-                            <button onClick={()=>votePost(post.id)}>Like</button>
-                            <button onClick={()=>noVotePost(post.id)}>Disliked</button>
+            </form> */}
+            
+            {
+                posts && (
+                    posts.map((post)=>{
+                        return(
+                            <CardPost
+                              key={post.id}
+                              userName={post.username}
+                              title={post.title}
+                              text={post.text}
+                              comments={post.commentsCount}
+                              votes={post.votesCount}
+                              viewPost={()=>detailPost(post.id)}
+                              id={post.id}
+                              update={getPost}
+                              
                             
-                        </div>
-                    )
-                })}
-            </div>
-        </div>
+                            />     
+                        )
+                    })
+                )
+               
+            }
+            
+
+        </FeedsContainer>
     )
 }
 
