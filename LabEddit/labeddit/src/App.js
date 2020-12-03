@@ -6,13 +6,12 @@ import { Container } from './styled';
 
 function App() {
   return (
-    <BrowserRouter>
-        <NavBar />
-        <Container>
+    <Container>
+      <BrowserRouter>
+          <NavBar />
           <Router />
-         </Container>
-                
       </BrowserRouter>
+    </Container>
   );
 }
 

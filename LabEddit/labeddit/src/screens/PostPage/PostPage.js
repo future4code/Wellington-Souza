@@ -1,15 +1,19 @@
-import axios from 'axios'
-import react, { useEffect, useState } from 'react'
+import React,{useEffect, useState} from 'react'
 import  {useProtectedPage } from '../../hooks/UseProtectPage/UseProtectPage'
+import CommentsCard from '../../components/CardComments/CardComments'
+
+import { PostPageContainer } from './PostPageStyles'
 import {useParams} from 'react-router-dom'
+import axios from 'axios'
+import {BASE_URL} from '../../constants/ApiUrl'
+import {  ContainerComment, PostsContainer } from '../../components/CardComments/style'
+import Comments from '../../components/CardComments/Comments'
 
 
 
 const PostPage = () => {
-
     const [post, setPost] = useState({})
     const [comments, setComments] = useState([])
-    const [form, setForm] = useState({text:""})
     const pathParams = useParams()
     const id = pathParams.id
 
@@ -19,13 +23,8 @@ const PostPage = () => {
         postDetails()
     },[])
 
-    const handleInputChange = (event) =>{
-        const {name, value} = event.target
-        setForm({...form, [name]: value})
-    }
-
     const postDetails = () => {
-        axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts/${id}`,{
+        axios.get(`${BASE_URL}/labEddit/posts/${id}`,{
             headers: {
                 Authorization: localStorage.getItem("token")
             }
@@ -37,64 +36,23 @@ const PostPage = () => {
         })
     }
 
-    const createComments = (event) => {
-
-        event.preventDefault()
-
-        const body = {
-            text: form.text
-        }
-
-        axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts/${id}/comment`, body,{
-            headers:{
-                Authorization: localStorage.getItem("token")
-            }
-        }).then(()=>{
-            alert("Comentário Cadastrado!!")
-            postDetails()
-        }).catch((err)=>{
-            console.log(err.message)
-        })
-    }
-
-    
-
     return(
-            
-            <div>
-                <p>{post.username}</p>
-                <p>{post.title}</p>
-                <p>{post.text}</p>
-                <p>{post.votesCount}</p>
-                <p>{post.commentsCount}</p>
-                <div>
-                    <form onSubmit={createComments}>
-                        <textarea
-                            name="text"
-                            type="text"
-                            value={form.text}
-                            onChange={handleInputChange}
-                        />
-                        <button>Comentar</button>
-                    </form>
-                </div>
-
-                <div>
-                    {comments && (
-                        comments.map((item)=>{
-                            return(
-                                <div key={item.id}>
-                                    <p>{item.text}</p>
-                                    <p>{item.username}</p>
-                                </div>
-                            )
-                        })
-                    )}
-                </div>
-                
-
-            </div>
         
+            <>
+                <CommentsCard
+                    username={post.username}
+                    text={post.text}
+                    title={post.title}
+                    id={post.id}
+                    comments={post.commentsCount}
+                    votes={post.votesCount}
+                    newsComments={comments}
+                    voteDirection={post.userVoteDirection}
+                    update={postDetails}
+                />
+            </>
+        
+                  
     )
 }
 

@@ -24,7 +24,7 @@ export const FormField = styled.form`
     
 `
 export const TitleField = styled.input`
-    width: 350px;
+    width: 550px;
     height: 35px;
     border-radius: 16px;
     border: none;
@@ -32,7 +32,7 @@ export const TitleField = styled.input`
     padding: 8px; 
 `
 export const TextForm = styled.textarea`
-    width: 350px;
+    width: 550px;
     height: 60px;
     margin-top: 8px;
     border-radius: 16px;
@@ -43,7 +43,7 @@ export const TextForm = styled.textarea`
 export const ButtonComments = styled.button`
     background-color: #DADFE6;
     border: none;
-    width: 360px;
+    width: 560px;
     margin-top: 8px;
     height: 45px;
     color: #ffff;

@@ -31,7 +31,8 @@ export const Texts = styled.div`
 export const AllIcons = styled.div`
     display: flex;
     justify-content: space-between;
-    margin-top: 95px;
+    position: relative;
+    bottom: -60px;
 `
 
 export const IconsVote = styled.div`
@@ -40,6 +41,7 @@ export const IconsVote = styled.div`
     img{
         width: 16px;
         margin-left: 8px;
+        cursor: pointer;
     }
 
     p{
@@ -54,6 +56,7 @@ export const IconsComments = styled.div`
         width: 24px;
         margin-right: 8px;
         margin-left: 8px;
+        cursor: pointer;
     }
 
     p{
