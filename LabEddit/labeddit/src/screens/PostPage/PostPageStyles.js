@@ -2,13 +2,11 @@ import styled from 'styled-components'
 
 
 export const PostPageContainer = styled.div`
-    
-    width: 100vw;
-    height: 100vh;
-    margin-top: 100px;
+    width: 800px;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding: 32px;
-`
+    padding: 20px;
+ `

@@ -1,5 +1,5 @@
 import React from 'react'
-import { AllIcons, IconsVote, Comments } from './style'
+import { AllIcons, IconsVote, Comment } from './style'
 import axios from 'axios'
 import Dow from '../../assets/down-arrow.svg'
 import Up from '../../assets/up-arrow.svg'
@@ -15,7 +15,7 @@ const NewComments = (props) => {
         const body = {
             direction: rate
         }
-        axios.put(`${BASE_URL}/posts/${props.idPost}/comment/${props.id}/vote`, body,{
+        axios.put(`https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts/${props.postId}/comment/${props.idComment}/vote`, body,{
             headers:{
                 Authorization: localStorage.getItem('token')
             }
@@ -32,7 +32,7 @@ const NewComments = (props) => {
             return (
                 <>
                     <img src={Dow} onClick={()=>{voteComm(-1)}}/>
-                    <p>{props.votes}</p>
+                    <p>{props.voteCount}</p>
                     <img src={Up} onClick={()=>{voteComm(1)}}/>
                 </>
             )
@@ -40,7 +40,7 @@ const NewComments = (props) => {
             return (
                 <>
                     <img src={Dow} onClick={()=>{voteComm(-1)}}/>
-                    <p>{props.votes}</p>
+                    <p>{props.voteCount}</p>
                     <img src={VoteLike} onClick={()=>{voteComm(0)}}/>
                 </>
             )
@@ -48,20 +48,19 @@ const NewComments = (props) => {
             return (
                 <>
                  <img src={Disliked} onClick={()=>{voteComm(0)}}/>
-                  <p>{props.votes}</p>
+                  <p>{props.voteCount}</p>
                   <img src={Up} onClick={()=>{voteComm(1)}}/>
                 </>
             )
         }
     }
-
-
+    
     return(
         <>
-            <Comments>
+            <Comment>
                 <h4>{props.user}</h4>
                 <p>{props.text}</p>
-            </Comments>
+            </Comment>
             <AllIcons>
                 <IconsVote>
                     {Like()}

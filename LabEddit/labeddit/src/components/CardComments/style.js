@@ -8,7 +8,7 @@ export const PostsContainer = styled.div`
     border-radius: 5px;
     box-shadow: 1px 2px 6px #adabab;
     padding: 24px;
-    margin: 0 auto;
+    margin: 100px auto;
     hr{
         border: 0.5 #9a9a9a;
     }
@@ -33,13 +33,14 @@ export const AllIcons = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 8px;
-      
-    
-    
+    position: relative;
+    bottom: 12px;
+
 `
 
 export const IconsVote = styled.div`
     display: flex;
+    
     
     img{
         width: 16px;
@@ -98,7 +99,7 @@ export const ButtonComments = styled.button`
     color: #000000;
 `
 
-export const Comments = styled.div`
+export const Comment = styled.div`
     width: 650px;
     height: 150px;
     margin: 0 auto;
@@ -118,6 +119,9 @@ export const Comments = styled.div`
 
 export const ContainerComment = styled.div`
     width: 700px;
+    min-height: 200px;
     background-color: #ffff;
-    height: 200px;
+    padding: 24px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 6px #adabab;
 `

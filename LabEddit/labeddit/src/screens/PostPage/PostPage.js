@@ -1,13 +1,12 @@
 import React,{useEffect, useState} from 'react'
 import  {useProtectedPage } from '../../hooks/UseProtectPage/UseProtectPage'
 import CommentsCard from '../../components/CardComments/CardComments'
-
-import { PostPageContainer } from './PostPageStyles'
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
 import {BASE_URL} from '../../constants/ApiUrl'
-import {  ContainerComment, PostsContainer } from '../../components/CardComments/style'
-import Comments from '../../components/CardComments/Comments'
+import { PostPageContainer } from './PostPageStyles'
+import NewComments from '../../components/CardComments/NewComments'
+
 
 
 
@@ -35,10 +34,11 @@ const PostPage = () => {
             console.log(err.message)
         })
     }
-
+ 
+    
     return(
         
-            <>
+            <PostPageContainer>
                 <CommentsCard
                     username={post.username}
                     text={post.text}
@@ -49,8 +49,12 @@ const PostPage = () => {
                     newsComments={comments}
                     voteDirection={post.userVoteDirection}
                     update={postDetails}
+                    commentsId={comments.id}
+                    commentsVote={comments.userVoteDirection}
+                    votesCount={comments.votesCount}
                 />
-            </>
+                
+            </PostPageContainer>
         
                   
     )
