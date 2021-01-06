@@ -79,6 +79,25 @@ app.get("/countries/:id", (req: Request, res: Response)=>{
      }
 })
 
+// Endpoint 4 PUT
+
+app.put("/countries/edit/:id",(req: Request, res: Response)=>{
+
+        const result = countries.findIndex(
+            country => country.id === Number(req.params.id)
+        )
+        countries[result].name = req.body.name;
+        countries[result].capital = req.body.capital
+        if(result) {
+            res.status(200).send(req.body)
+        } else {
+            res.status(404).send("Not found")
+        }
+
+    })
+
+
+
 app.listen(3003, () => {
     console.log("Server is running in http://localhost:3003");
    });
