@@ -54,12 +54,15 @@ async function getUserById (id : string): Promise<any>{
    }
 }
 
-async function editUsers (id: string) : Promise<void>{
+async function editUsers (users: any) : Promise<void>{
 
    try{
       await connection
-         .update('users')
-         
+         .update("users").    
+      console.log("alterado com sucesso!")
+   
+   } catch (error) {
+      console.log(error.sqlMessage || error.message)
    }
 
 }
@@ -128,6 +131,31 @@ app.get("/users/:id", async (req: Request, res: Response)=>{
    }
 })
 
+app.put("users/edit/:id", async (req: Request, res: Response) => {
+   
+   try{
+
+      const userId = req.params.id
+
+      if(!userId.length){
+         return res.status(400).send("informe um id válido")
+      }
+
+      const {name, nickname} = req.body
+
+      const editUser : any = {
+         name,
+         nickname
+      }
+      
+      await editUsers(editUser)
+      res.status(200).send("Usuário editado com sucesso!")
+   } catch (error) {
+      res.status(400).send("Usuário não encontrado!")
+   }
+
+})
+
 
 app.post("/user", async (req: Request, res: Response) => {
    try{
@@ -147,6 +175,8 @@ app.post("/user", async (req: Request, res: Response) => {
       res.status(400).send(error.message)
    }
 })
+
+
 
 const server = app.listen(process.env.PORT || 3003, () => {
    if (server) {
