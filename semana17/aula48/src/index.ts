@@ -1,7 +1,7 @@
-import express, {Express, Request, Response} from 'express'
+import express, {Express} from 'express'
 import cors from 'cors'
 import { AddressInfo } from "net";
-import { getAllUsers, getByNameUsers } from './data/endPoints';
+import { getAllUsers, getByNameUsers, getByType } from './data/endPoints';
 
 
 const app: Express = express();
@@ -12,8 +12,9 @@ app.use(cors());
 
  // endpoints aqui
 
- app.get("users", getAllUsers)
- app.get("users/search", getByNameUsers)
+ app.get("/users", getAllUsers)
+ app.get("/users/search", getByNameUsers)
+ app.get("/users/search/:type", getByType)
 
 
 

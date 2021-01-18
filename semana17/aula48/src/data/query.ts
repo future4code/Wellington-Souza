@@ -20,3 +20,14 @@ export async function selectAllUsers():Promise<any> {
 
    return result[0]
 }
+
+export  async function selectType(type: string):Promise<any> {
+   
+   const result = await connection.raw(`
+      SELECT name, type
+      FROM Aula48
+      WHERE type LIKE  "%${type}%";
+   `)
+
+   return result[0]
+}
