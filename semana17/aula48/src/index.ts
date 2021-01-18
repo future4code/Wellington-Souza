@@ -1,6 +1,7 @@
 import express, {Express, Request, Response} from 'express'
 import cors from 'cors'
 import { AddressInfo } from "net";
+import { getAllUsers, getByNameUsers } from './data/endPoints';
 
 
 const app: Express = express();
@@ -9,11 +10,10 @@ app.use(express.json());
 app.use(cors());
 
 
-
-
  // endpoints aqui
 
- 
+ app.get("users", getAllUsers)
+ app.get("users/search", getByNameUsers)
 
 
 
