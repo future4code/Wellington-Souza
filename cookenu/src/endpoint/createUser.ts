@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import {insertUser} from '../data/insertUser'
 import { idGenerate} from '../services/idGenerate'
 import {generateToken} from '../services/authenticator'
-import {hash} from '../service/hashManager'
+import {generateHash} from '../services/hashManager'
 
 export default async function createUser (
     req: Request,
@@ -21,7 +21,7 @@ export default async function createUser (
 
         const id: string = idGenerate()
 
-        const cypherPassword: string = hash(req.body.password)
+        const cypherPassword: string = generateHash(req.body.password)
 
         await insertUser (
             id,
